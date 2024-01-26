@@ -16,7 +16,7 @@ final class SalesOrder
 
 sample code:
 
-$salesOrder = SalesOrder->place(// ... //);
+$salesOrder = (new SalesOrder())->place(// ... //);
 
 
 */
