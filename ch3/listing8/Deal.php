@@ -2,7 +2,7 @@
 
 /*
 Solution : Listing 3.10 here
-Check previous listings 3.6 and listing 3.7
+Check previous listings 3.8 and listing 3.9
 The idea is to remove superfluous constructor arguments
 */
 final class Deal
