@@ -14,6 +14,6 @@ I decided to rewrite every code listing in each of the 10 chapters in the book t
 
 You can access the book table of content here :
 
-https://drive.google.com/file/d/1vJxh0-6J-zEcYwVJo550YuywMeHm_-ld/view?usp=sharing 
+<b>https://drive.google.com/file/d/1vJxh0-6J-zEcYwVJo550YuywMeHm_-ld/view?usp=sharing</b> 
 
 I added remarks and observations above the code to make it completely intelligible.
