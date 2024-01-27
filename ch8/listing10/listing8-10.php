@@ -26,7 +26,7 @@ public function execute(Request $request): Response
 // listing 8.10
 public function execute(Request $request): Response
 {
-		$stockReport = $this->repository->getStockReport();
+  $stockReport = $this->repository->getStockReport();
 		
-		return new JsonResponse([$stockReport]);
+   return new JsonResponse([$stockReport]);
 }
