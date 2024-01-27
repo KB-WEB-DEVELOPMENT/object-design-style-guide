@@ -19,23 +19,23 @@ final class ReplaceParametersWithEnvironmentVariables implements FileLoader
 
 		foreach ($parameters as $key => $value) {
 
-			$parameters[$key] = $this->replaceWithEnvVariable($value);
+		    $parameters[$key] = $this->replaceWithEnvVariable($value);
 		}
 		
 		/*
 		  if no exceptions are caught, the array $parameters returns: 
 		  (1) an array with one $key as key and one $value as value for the one $key/$value pair contained in $filepath or an empty array
 		   and 
-		  (2) If $this->envVariables[$value] is set, the value of $this->envVariables[$value] for each $value in the foreach loop.
-              If $this->envVariables[$value] is not set, $value for each $value in the foreach loop.
-          See code implementation 		  
+		  (2)  If $this->envVariables[$value] is set, the value of $this->envVariables[$value] for each $value in the foreach loop.
+                       If $this->envVariables[$value] is not set, $value for each $value in the foreach loop.
+                   See code implementation 		  
 		*/
 		return $parameters;
 	}
 	
 	private function replaceWithEnvVariable(string $value): string
 	{
-		return (isset($this->envVariables[$value])) ? $this->envVariables[$value] : $value;	
+	   return (isset($this->envVariables[$value])) ? $this->envVariables[$value] : $value;	
 	}
 }
 
@@ -44,16 +44,16 @@ final class ReplaceParametersWithEnvironmentVariables implements FileLoader
 Code implementation:
 
 $parameterLoader = new ParameterLoader(
-						new ReplaceParametersWithEnvironmentVariables(
-							new MultipleLoaders([
-								'json' => new JsonFileLoader(),
-								'xml' => new XmlFileLoader()
-							]),
-							[
-								'APP_ENV' => 'dev',
-							]
-						)
-					);
+		       new ReplaceParametersWithEnvironmentVariables(
+			   new MultipleLoaders([
+			      'json' => new JsonFileLoader(),
+			      'xml'  => new XmlFileLoader()
+			    ]),
+			    [
+			      'APP_ENV' => 'dev',
+			    ]
+			)
+		   );
 					
 $params = $parameterLoader->loadFile(__DIR__ . '/parameters.json');	
 // $params[0] - multiple pairs of key,value in the "parameters.json" array or an empty array 
