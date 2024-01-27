@@ -29,11 +29,11 @@ final class ScheduleMeetupService
 	public function schedule(ScheduleMeetup $command,UserId $currentUserId): MeetupId
 	{
 		$meetup = (new Meetup())->schedule(
-							        $this->meetupRepository->nextIdentity(),
-							        (new Title())->fromString($command->title),
-							        (new ScheduleDate())->fromString($command->datum),
-							        $currentUserId
-		);
+				$this->meetupRepository->nextIdentity(),
+				(new Title())->fromString($command->title),
+				(new ScheduleDate())->fromString($command->datum),
+				$currentUserId
+		           );
 
 		$this->meetupRepository->save($meetup);
 
