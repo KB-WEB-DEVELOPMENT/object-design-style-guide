@@ -29,9 +29,9 @@ final class MeetupController extends AbstractController
 		}
 		
 		return  $this->render('scheduleMeetup.html.twig',
-							[
-							  'form' => $form->createView()
-							]
-					);
+					[
+					  'form' => $form->createView()
+					]
+			);
 	}
 }
