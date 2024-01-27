@@ -23,7 +23,7 @@ final class Importer
 			// Store each file data in the array $lines
 			$lines = /* numeric array, contains an index number as key and corresponding value either about 
  			            the file header or file content itself.
-					 */;
+				  */;
 
 			foreach ($lines as $index => $line) {
 				
