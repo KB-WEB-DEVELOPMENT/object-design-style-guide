@@ -17,11 +17,9 @@ final class StockReportController
 		$allPurchaseOrders = $this->repository->findAll();
 
 		$purchaseOrdersForStockReport = array_map(
-											function (PurchaseOrder $purchaseOrder) {
-												return $purchaseOrder->forStockReport();
-											},
-											$allPurchaseOrders
-										);
+						  function (PurchaseOrder $purchaseOrder) {
+						       return $purchaseOrder->forStockReport();
+						  },$allPurchaseOrders);
 
 		$stockReport = [];
 
