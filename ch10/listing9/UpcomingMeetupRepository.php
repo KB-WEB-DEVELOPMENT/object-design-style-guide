@@ -11,7 +11,6 @@ just the implementation of the read model repository interface.
 namespace Application\UpcomingMeetups;
 
 interface UpcomingMeetupRepository
-{
-	
-	public function upcomingMeetups(DateTime $today): UpcomingMeetup
+{	
+   public function upcomingMeetups(DateTime $today): UpcomingMeetup
 }
