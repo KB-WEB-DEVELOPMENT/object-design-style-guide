@@ -16,8 +16,7 @@ use Application\UpcomingMeetups\UpcomingMeetupRepository;
 use Doctrine\DBAL\Connection;
 
 final class UpcomingMeetupDoctrineDbalRepository implements UpcomingMeetupRepository
-{
-	
+{	
 	public function __construct(
 		private Connection $connection
 	){}
@@ -29,14 +28,13 @@ final class UpcomingMeetupDoctrineDbalRepository implements UpcomingMeetupReposi
 		$rowsArray = $this->connection->/* some method to retrieve all meetups in the DB in an array of arrays */;
 
 		return 	array_map(
-					function ($singleArr) {
-						$upcomingMeetup = new UpcomingMeetup();
-						$upcomingMeetup->title = $singleArr['title'];
-						$upcomingMeetup->datum =  $singleArr['datum'];
-
-						return $upcomingMeetup;
-					},
-					$rowsArray
-				);
+			  function ($singleArr) {
+			     $upcomingMeetup = new UpcomingMeetup();
+			     $upcomingMeetup->title = $singleArr['title'];
+			     $upcomingMeetup->datum =  $singleArr['datum'];
+				  
+			      return $upcomingMeetup;
+			  },$rowsArray
+		        );
 	}
 }
