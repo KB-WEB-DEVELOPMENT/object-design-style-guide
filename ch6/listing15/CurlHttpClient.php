@@ -2,7 +2,7 @@
 
 namespace MyClasses;
 
-use MyClasses\Money
+use MyClasses\Money;
 use MyClasses\Currency;
 
 use Symfony\Component\HttpClient\HttpClient;
