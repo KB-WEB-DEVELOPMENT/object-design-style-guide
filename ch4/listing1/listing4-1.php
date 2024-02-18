@@ -24,7 +24,7 @@ final class SalesInvoice
 			throw new RuntimeException(/* ... */);
 		}	
 	
-		$this->lines[] = Line.create(/* ... */);
+		$this->lines[] = Line->create(/* ... */);
 	}
 	
 	public function finalize(): void
