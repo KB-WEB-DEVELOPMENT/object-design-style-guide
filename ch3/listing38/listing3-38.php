@@ -31,7 +31,7 @@ final class ScheduleMeetup
 			$errors['title'][] = 'validation.empty_title';
 		}
 		
-		if (this->date == '') {
+		if (this->datum == '') {
 			$errors['date'][] = 'validation.empty_date';
 		}
 		
