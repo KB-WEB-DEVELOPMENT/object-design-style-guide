@@ -18,6 +18,6 @@ $importer = new Importer(); // no idea if property is set to true or false here
 
 // ...
 
-importer.ignoreErrors(false); // may not be clear down the road if the property is set to false
+importer->ignoreErrors(false); // may not be clear down the road if the property is set to false
 
 // ...
