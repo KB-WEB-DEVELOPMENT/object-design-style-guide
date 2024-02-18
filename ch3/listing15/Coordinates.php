@@ -17,7 +17,7 @@ final class Coordinates
 			throw new InvalidArgumentException('Latitude should be between -90 and 90');
 		}
 	
-		if (longitude > 180 || longitude < -180) {
+		if ($this->longitude > 180 || $this->longitude < -180) {
 			throw new InvalidArgumentException('Longitude should be between -180 and 180');
 		}
 	
